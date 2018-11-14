@@ -1,15 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const MenuWidget = () => {
-    return (
-        <div>
-            <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
+class MenuWidget extends React.Component { 
+    render() {
+        return (
+            <span>
+                <a className={"navbar-brand mr-1"} href="index.html">Alleanza</a>
 
-            <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-                <i class="fa fa-bars"></i>
-            </button>
-        </div>
-    );
+                <button className={"btn btn-link btn-sm text-white order-1 order-sm-0"} id="sidebarToggle" href="#">
+                    <i className={"fa fa-bars"}></i>
+                </button>
+            </span>
+        );
+    }
 }
+
+MenuWidget.propTypes = {};
 
 export default MenuWidget;

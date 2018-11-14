@@ -8,9 +8,9 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
   mode: 'development',
   entry: {
-    main: './main.js',
+    css: './css/sb-admin.css',
     styles: './styles/main.scss',
-    css: './css/sb-admin.css'
+    main: './main.js'
   },
   output: {
     filename: '[name].js?[hash]',
@@ -29,11 +29,7 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['babel-preset-env'],
-            plugins: ['babel-plugin-transform-runtime']
-          }
+          loader: 'babel-loader'
         }
       }
       ,{
